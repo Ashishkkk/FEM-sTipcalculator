@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Space Mono', monospace;
+}
+:root {
+    --Very-dark-cyan: hsl(183, 100%, 15%);
+    --Dark-grayish-cyan: hsl(186, 14%, 43%);
+    --Dark-grayish-cyan-1: hsl(184, 14%, 56%);
+    --Light-grayish-cyan: hsl(185, 41%, 84%);
+    --Light-grayish-cyan-1: hsl(189, 41%, 97%);
+    --White: hsl(0, 0%, 100%);
+    --Strong-cyan: hsl(172, 67%, 45%);
+}
+body {
+    background-color: var(--Light-grayish-cyan);
+}
+#spli {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3em;
+    color: var(--Dark-grayish-cyan);
+    line-height: 1.5;
+    padding: 2em 0;
+    font-weight: 700;
+}
+#main-container {
+    border-radius: 20px 20px 0 0;
+    background-color: var(--White);
+    padding-bottom: 2em;
+}
+#bill-data-container {
+    padding: 2em 2em;
+}
+
+#bill-div {
+    display: flex;
+    flex-direction: column;
+    font-weight: 700;
+    position: relative;
+}
+#icon-dollar {
+    position: absolute;
+    top: 2.7rem;
+    left: 1.1rem;
+    width: 12px;
+
+}
+
+#bill-div label {
+    color: var(--Dark-grayish-cyan);
+}
+#bill {
+    background: var(--Light-grayish-cyan-1);
+    color: var(--Very-dark-cyan);
+    outline: none;
+    border: none;
+    border-radius: 0.5rem;
+    text-align: right;
+    padding: .5em;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-top: 5px;
+    cursor: pointer;
+}
+#bill:focus {
+    outline: 2px solid cyan;
+}
+#select-tip {
+    padding: 2em 0 1em 0;
+}
+#select-tip > label {
+    display: block;
+    color: var(--Dark-grayish-cyan);
+    font-weight: 700;
+}
+#custom-value {
+    width: 47%;
+    border: none;
+    outline: none;
+    padding: .5rem;
+    font-weight: 700;
+    text-align: right;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    background: var(--Light-grayish-cyan-1);
+    color: var(--Dark-grayish-cyan);
+    cursor: pointer;
+}
+#custom-value:focus{
+    outline: 2px solid cyan;
+}
+#btn-amu  {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    text-align: center;
+    margin: 15px 0;
+}
+
+.btn  {
+    width: 47%;
+    border: none;
+    outline: none;
+    text-align: center;
+    background: var(--Very-dark-cyan);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--Light-grayish-cyan-1);
+    padding: .4rem 0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.btn:hover {
+    background: var(--Strong-cyan);
+    color: var(--Very-dark-cyan);
+}
+#NOP {
+    font-weight: 700;
+    color: var(--Dark-grayish-cyan);
+}
+#NOP-input {
+    width: 100%;
+    border: none;
+    outline: none;
+    font-weight: 700;
+    text-align: right;
+    padding: .5em;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    background: var(--Light-grayish-cyan-1);
+    color: var(--Very-dark-cyan);
+    cursor: pointer;
+}
+#NOP-input:focus {
+    outline: 2px solid cyan;
+}
+.nof-people {
+    position: relative;
+}
+.nof-people.is-ok .small {
+    display: none;
+}
+.nof-people.is-error .small {
+    font-weight: 700;
+    color: red;
+    position: absolute;
+    top: 0;
+    right: 1em;
+}
+
+#i-person {
+    position: absolute;
+    top: 2.5rem;
+    left: 1.1rem;
+}
+#bill-amount-container {
+    display: flex;
+    flex-direction: column;
+    background: var(--Very-dark-cyan);
+    padding: 1.5rem;
+    border-radius: 1em;
+    margin: 0 1.5rem;
+}
+.bill-amount {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: .8em 0;
+}
+.person-amu > label {
+    font-weight: 700;
+    color: white;
+}
+.person-amu > p {
+    font-size: .8rem;
+    font-weight: 700;
+    color: var(--Dark-grayish-cyan-1);
+}
+.amount {
+    font-size: 2em;
+    font-weight: 700;
+    color: var(--Strong-cyan);
+}
+
+#reset-btn {
+    font-weight: 700;
+    padding: .6rem 0;
+    font-size: 1.2em;
+    margin-top: .5em;
+
+    border: none;
+    border-radius: 5px;
+    background: var(--Strong-cyan);
+    color: var(--Very-dark-cyan);
+    cursor: pointer;
+}
+#reset-btn:hover {
+    background: cyan;
+}
+
+
+
+
+/* media query start here for 1440px */
+/* main  container */
+
+@media only screen and (min-width: 850px) {
+    #main-container {
+        display: flex;
+        justify-content: center;
+        margin: 2em 5% 5em;
+    }
+    .btn {
+        width: 27%;
+    }
+    #custom-value {
+        width: 27%;
+    }
+    #bill-data-container {
+        width: 40%;
+        padding: 4em 0;
+    }
+    
+    #bill-amount-container {
+        width: 40%;
+        margin-top: 3em;
+    }
+    #reset-btn {
+        margin-top: 5em;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    #main-container {
+        display: flex;
+        justify-content: center;
+        margin: 2em 10% 5em;
+    }
+
+    #bill-data-container {
+        padding: 3em 0;
+        width: 45%;
+    }
+    
+    #bill-amount-container {
+        margin-top: 4em;
+        width: 40%;
+    }
+
+    .btn {
+        width: 30%;
+    }
+    #custom-value {
+        width: 30%;
+    }
+    #reset-btn {
+        margin-top: 7em;
+    }
+}
+
+
+
+
+
